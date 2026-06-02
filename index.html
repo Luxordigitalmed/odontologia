@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristina Garavito Odontología | Estética Dental y Periodoncia en Tarragona</title>
+  <meta name="description" content="Clínica dental en Tarragona especializada en estética dental y periodoncia. Cubrimos todas las especialidades odontológicas con un equipo altamente cualificado. Av. Pau Casals, 7.">
+  <meta name="keywords" content="dentista tarragona, odontología tarragona, estética dental tarragona, periodoncia tarragona, implantes dentales tarragona, ortodoncia tarragona, clínica dental tarragona">
+  <meta name="author" content="Cristina Garavito Odontología">
+  <meta property="og:title" content="Cristina Garavito Odontología | Tarragona">
+  <meta property="og:description" content="Clínica dental en Tarragona especializada en estética dental, periodoncia y todas las especialidades odontológicas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.odontologiacg.com">
+  <link rel="canonical" href="https://www.odontologiacg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    /* ── HOME-ONLY STYLES ── */
+
+    /* HERO */
+    #inicio {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      background: var(--black);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 72% 44%, rgba(184,150,110,0.11) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 85%, rgba(184,150,110,0.05) 0%, transparent 45%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 0 60px;
+      max-width: 820px;
+    }
+    .hero-tag {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--gold);
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .hero-tag::before {
+      content: ''; display: block;
+      width: 28px; height: 1px; background: var(--gold);
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(50px, 7.5vw, 100px);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .hero-h1 em { font-style: italic; color: var(--gold); }
+    .hero-desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7; font-weight: 300;
+      max-width: 460px; margin-bottom: 48px;
+    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 60px; z-index: 2;
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.25); font-size: 11px;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.1);
+      position: relative; overflow: hidden;
+    }
+    .scroll-line::after {
+      content: '';
+      position: absolute; left: -100%; top: 0;
+      width: 100%; height: 100%;
+      background: var(--gold);
+      animation: scrollAnim 2.2s ease infinite;
+    }
+    @keyframes scrollAnim { 0%{left:-100%} 100%{left:100%} }
+    .hero-contact {
+      position: absolute; bottom: 40px; right: 60px; z-index: 2;
+      text-align: right;
+    }
+    .hero-contact a {
+      display: block; color: rgba(255,255,255,0.35);
+      font-size: 12.5px; letter-spacing: 0.06em; text-decoration: none;
+      transition: color 0.2s; margin-bottom: 4px;
+    }
+    .hero-contact a:hover { color: var(--gold); }
+
+    /* ABOUT */
+    #nosotros {
+      padding: 100px 60px;
+      background: var(--off-white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+    .about-desc {
+      font-size: 17px; color: #555; line-height: 1.75;
+      margin-top: 24px; font-weight: 300;
+    }
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 36px; margin-top: 52px;
+    }
+    .stat { border-top: 1px solid rgba(184,150,110,0.3); padding-top: 18px; }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 50px; font-weight: 400;
+      color: var(--black); line-height: 1;
+    }
+    .stat-label {
+      font-size: 12px; color: var(--gray);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px;
+    }
+    .about-img {
+      background: var(--dark);
+      height: 520px; border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .about-img-ph {
+      text-align: center; color: rgba(255,255,255,0.1);
+    }
+    .about-badge {
+      position: absolute; bottom: 28px; left: 28px;
+      background: var(--gold); color: var(--black);
+      padding: 16px 22px; border-radius: 2px;
+    }
+    .about-badge strong { display: block; font-family: var(--serif); font-size: 18px; font-weight: 600; }
+    .about-badge span { display: block; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+    /* SERVICES */
+    #servicios {
+      background: var(--black);
+      padding: 100px 60px;
+    }
+    .services-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 52px;
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.05);
+    }
+    .svc-card {
+      background: var(--dark); padding: 40px;
+      transition: background 0.25s;
+      position: relative; overflow: hidden;
+      text-decoration: none; display: block;
+    }
+    .svc-card:hover { background: var(--mid); }
+    .svc-card::after {
+      content: ''; position: absolute;
+      bottom: 0; left: 0; width: 0; height: 1px;
+      background: var(--gold); transition: width 0.4s;
+    }
+    .svc-card:hover::after { width: 100%; }
+    .svc-num {
+      display: block; font-size: 11px;
+      color: rgba(184,150,110,0.35);
+      letter-spacing: 0.1em; margin-bottom: 22px;
+    }
+    .svc-icon { width: 36px; height: 36px; color: var(--gold); margin-bottom: 18px; display: block; }
+    .svc-name {
+      font-family: var(--serif); font-size: 21px;
+      color: var(--white); font-weight: 400;
+      line-height: 1.3; margin-bottom: 10px;
+    }
+    .svc-desc { font-size: 14px; color: rgba(255,255,255,0.38); line-height: 1.6; font-weight: 300; }
+    .svc-link {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 11.5px; color: var(--gold);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: 20px; opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .svc-card:hover .svc-link { opacity: 1; }
+
+    /* PILLARS */
+    #clinica { padding: 100px 60px; background: var(--white); }
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 48px; margin-top: 56px;
+    }
+    .pillar { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 26px; }
+    .pillar-icon { width: 34px; height: 34px; color: var(--gold); margin-bottom: 18px; display: block; }
+    .pillar-title { font-family: var(--serif); font-size: 19px; font-weight: 500; color: var(--black); margin-bottom: 10px; }
+    .pillar-desc { font-size: 14px; color: #666; line-height: 1.7; font-weight: 300; }
+
+    /* TEAM TEASER */
+    #equipo { padding: 100px 60px; background: var(--off-white); }
+    .team-row {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 20px; margin-top: 52px;
+    }
+    .team-card {
+      background: var(--white); border-radius: 2px;
+      overflow: hidden; transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none; display: block;
+    }
+    .team-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.09); }
+    .team-photo {
+      height: 180px; background: var(--dark);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .team-initials {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: rgba(184,150,110,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 22px; color: var(--gold);
+    }
+    .team-info { padding: 18px 20px; }
+    .team-name { font-family: var(--serif); font-size: 15px; color: var(--black); font-weight: 500; margin-bottom: 5px; }
+    .team-role { font-size: 11px; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.45; }
+    .team-col { font-size: 11px; color: var(--gray); margin-top: 7px; }
+
+    /* PROCESS */
+    #proceso { padding: 100px 60px; background: var(--black); }
+    .process-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 52px; }
+    .process-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.05);
+    }
+    .step {
+      background: var(--dark); padding: 40px;
+    }
+    .step-num {
+      font-family: var(--serif); font-size: 60px;
+      color: rgba(184,150,110,0.12); line-height: 1;
+      font-weight: 400; margin-bottom: 18px;
+    }
+    .step-title { font-family: var(--serif); font-size: 21px; color: var(--white); font-weight: 400; margin-bottom: 10px; }
+    .step-desc { font-size: 14px; color: rgba(255,255,255,0.38); line-height: 1.6; font-weight: 300; }
+
+    /* CLUB OCG */
+    #club {
+      background: linear-gradient(135deg, var(--gold) 0%, #9e7a4c 100%);
+      padding: 90px 60px; text-align: center;
+    }
+    .club-pre { font-size: 10.5px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(0,0,0,0.35); margin-bottom: 14px; }
+    .club-title { font-family: var(--serif); font-size: clamp(36px, 4vw, 52px); color: var(--black); font-weight: 400; margin-bottom: 16px; }
+    .club-desc { font-size: 17px; color: rgba(0,0,0,0.55); max-width: 520px; margin: 0 auto 36px; line-height: 1.6; font-weight: 300; }
+    .club-benefits {
+      display: flex; justify-content: center; gap: 32px;
+      flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .club-benefit {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; color: rgba(0,0,0,0.65); font-weight: 500;
+    }
+    .club-benefit::before { content: '✓'; font-weight: 700; color: var(--black); }
+    .btn-dark-solid {
+      display: inline-block; background: var(--black); color: var(--white);
+      padding: 13px 34px; border-radius: 2px;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-dark-solid:hover { background: #2a2a2a; }
+
+    /* CONTACT STRIP */
+    #contacto {
+      padding: 100px 60px; background: var(--off-white);
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 60px;
+    }
+    .contact-block h3 {
+      font-family: var(--serif); font-size: 22px;
+      font-weight: 500; color: var(--black); margin-bottom: 20px;
+    }
+    .contact-block p, .contact-block a {
+      font-size: 15px; color: #555; line-height: 1.85;
+      text-decoration: none; display: block;
+    }
+    .contact-block a:hover { color: var(--gold); }
+    .hours-row {
+      display: flex; justify-content: space-between;
+      font-size: 13.5px; color: #555;
+      padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-label { font-weight: 600; color: var(--black); }
+
+    @media(max-width:1024px){
+      #nosotros { grid-template-columns: 1fr; padding: 70px 24px; }
+      #servicios, #clinica, #equipo, #proceso, #club, #contacto { padding: 70px 24px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .team-row { grid-template-columns: repeat(3, 1fr); }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      #contacto { grid-template-columns: 1fr; }
+      .hero-content { padding: 0 24px; }
+      .hero-scroll, .hero-contact { display: none; }
+      .services-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .process-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+    }
+    @media(max-width:640px){
+      .services-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .team-row { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Cristina Garavito <span>Odontología</span></a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="especialidades.html">Especialidades</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="tel:977079926" class="nav-cta">977 079 926</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Clínica dental en Tarragona</div>
+    <h1 class="hero-h1">Estética dental<br><em>y Periodoncia</em></h1>
+    <p class="hero-desc">
+      Atención profesional, integral y personalizada. Tu salud oral es nuestra prioridad, con un equipo especialista en cada área de la odontología.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:977079926" class="btn-primary">Pedir Cita — 977 079 926</a>
+      <a href="especialidades.html" class="btn-ghost">Ver Especialidades</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span class="scroll-line"></span>Descubrir</div>
+  <div class="hero-contact">
+    <a href="tel:977079926">977 079 926</a>
+    <a href="mailto:info@odontologiacg.com">info@odontologiacg.com</a>
+  </div>
+</section>
+
+<!-- ── SOBRE NOSOTROS ── -->
+<section id="nosotros">
+  <div class="about-text">
+    <div class="section-tag">Sobre la Clínica</div>
+    <h2 class="section-title">Donde el arte<br>se encuentra con<br>la odontología</h2>
+    <p class="about-desc">
+      En la clínica Odontología Cristina Garavito nos preocupa el bienestar de nuestros pacientes. Nuestro propósito es ofrecer una atención profesional, integral y personalizada, cubriendo todas las especialidades odontológicas con un equipo altamente cualificado.
+    </p>
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-num" data-target="9">9</div>
+        <div class="stat-label">Especialidades</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="5">5</div>
+        <div class="stat-label">Profesionales</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+10</div>
+        <div class="stat-label">Años de experiencia</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Sede en Tarragona</div>
+      </div>
+    </div>
+    <div style="margin-top:40px">
+      <a href="equipo.html" class="btn-ghost-dark">Conocer al equipo</a>
+    </div>
+  </div>
+  <div class="about-img">
+    <div class="about-img-ph">
+      <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(184,150,110,0.25)" stroke-width="1">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-top:10px;color:rgba(255,255,255,0.08)">Clínica · Tarragona</p>
+    </div>
+    <div class="about-badge">
+      <strong>Av. Pau Casals, 7</strong>
+      <span>43003 Tarragona</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ESPECIALIDADES ── -->
+<section id="servicios">
+  <div class="services-header">
+    <div>
+      <div class="section-tag">Especialidades</div>
+      <h2 class="section-title light">Tratamientos de<br>odontología integral</h2>
+    </div>
+    <a href="especialidades.html" class="btn-outline">Ver todas las especialidades</a>
+  </div>
+  <div class="services-grid">
+
+    <a href="especialidades/odontologia-conservadora.html" class="svc-card">
+      <span class="svc-num">01</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1.5 5 3 7l4 6 4-6c1.5-2 3-4.5 3-7 0-3.5-3-7-7-7z"/></svg>
+      <div class="svc-name">Odontología Conservadora</div>
+      <div class="svc-desc">Preservación y restauración de la estructura dental mediante técnicas mínimamente invasivas.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/protesis-dental.html" class="svc-card">
+      <span class="svc-num">02</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      <div class="svc-name">Prótesis Dental</div>
+      <div class="svc-desc">Restauración funcional y estética mediante prótesis fija, removible e implanto-retenida.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/atm.html" class="svc-card">
+      <span class="svc-num">03</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-linecap="round" stroke-width="2.5"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-linecap="round" stroke-width="2.5"/></svg>
+      <div class="svc-name">ATM</div>
+      <div class="svc-desc">Diagnóstico y tratamiento de la articulación temporomandibular para aliviar dolor y disfunción.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/implantologia.html" class="svc-card">
+      <span class="svc-num">04</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V12m0 0V2m0 10H2m10 0h10"/></svg>
+      <div class="svc-name">Implantología y Cirugía Oral</div>
+      <div class="svc-desc">Colocación de implantes y procedimientos quirúrgicos con tecnología de vanguardia.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/periodoncia.html" class="svc-card">
+      <span class="svc-num">05</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <div class="svc-name">Periodoncia</div>
+      <div class="svc-desc">Prevención y tratamiento de enfermedades que afectan las encías y los tejidos de soporte dental.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/estetica-dental.html" class="svc-card">
+      <span class="svc-num">06</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div class="svc-name">Estética Dental</div>
+      <div class="svc-desc">Carillas, blanqueamiento y diseño de sonrisa personalizado para resultados excepcionales.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/endodoncia.html" class="svc-card">
+      <span class="svc-num">07</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <div class="svc-name">Endodoncia</div>
+      <div class="svc-desc">Tratamiento de conductos para eliminar infecciones y conservar la pieza dental natural.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/ortodoncia.html" class="svc-card">
+      <span class="svc-num">08</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="svc-name">Ortodoncia</div>
+      <div class="svc-desc">Alineación dental con brackets e Invisalign® para corregir posición y mordida.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+    <a href="especialidades/odontopediatria.html" class="svc-card">
+      <span class="svc-num">09</span>
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="svc-name">Odontopediatría</div>
+      <div class="svc-desc">Atención dental especializada para niños en un ambiente cálido y de plena confianza.</div>
+      <div class="svc-link">Saber más <span>→</span></div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── POR QUÉ ELEGIRNOS ── -->
+<section id="clinica">
+  <div class="section-tag">La Clínica</div>
+  <h2 class="section-title">Por qué elegirnos</h2>
+  <div class="pillars-grid">
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="pillar-title">Todas las Especialidades</div>
+      <div class="pillar-desc">Cubrimos todas las especialidades odontológicas para ofrecer una valoración precisa y adoptar las mejores alternativas de tratamiento.</div>
+    </div>
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="pillar-title">Profesionales Cualificados</div>
+      <div class="pillar-desc">Nuestro equipo de especialistas trabaja de forma conjunta para ofrecer a cada paciente un trato cercano y resultados de excelencia.</div>
+    </div>
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="pillar-title">Diagnósticos Personalizados</div>
+      <div class="pillar-desc">Cada paciente recibe una valoración personalizada para adecuar el tratamiento más adecuado a su caso con los mejores resultados.</div>
+    </div>
+    <div class="pillar">
+      <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <div class="pillar-title">Equipamiento y Tecnología</div>
+      <div class="pillar-desc">Disponemos de radiografía digital, ortopantomografía y equipos de primera calidad con estrictos controles de asepsia en todos los procedimientos.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EQUIPO ── -->
+<section id="equipo">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0">
+    <div>
+      <div class="section-tag">Nuestro Equipo</div>
+      <h2 class="section-title">Profesionales a tu servicio</h2>
+    </div>
+    <a href="equipo.html" class="btn-ghost-dark" style="margin-bottom:8px">Ver todo el equipo</a>
+  </div>
+  <div class="team-row">
+    <a href="equipo.html" class="team-card">
+      <div class="team-photo"><div class="team-initials">CG</div></div>
+      <div class="team-info">
+        <div class="team-name">Dra. Cristina Garavito F.</div>
+        <div class="team-role">Rehabilitación Oral · ATM · Estética e Implantes</div>
+        <div class="team-col">Nº Col. 4847</div>
+      </div>
+    </a>
+    <a href="equipo.html" class="team-card">
+      <div class="team-photo"><div class="team-initials">CA</div></div>
+      <div class="team-info">
+        <div class="team-name">Dra. Cristina Aulés Martínez</div>
+        <div class="team-role">Ortodoncia y Ortopedia</div>
+        <div class="team-col">Nº Col. 3121</div>
+      </div>
+    </a>
+    <a href="equipo.html" class="team-card">
+      <div class="team-photo"><div class="team-initials">PA</div></div>
+      <div class="team-info">
+        <div class="team-name">Dra. Patricia Anguis Martín</div>
+        <div class="team-role">Cirugía Oral e Implantología · Periodoncia</div>
+        <div class="team-col">Nº Col. 5217</div>
+      </div>
+    </a>
+    <a href="equipo.html" class="team-card">
+      <div class="team-photo"><div class="team-initials">DR</div></div>
+      <div class="team-info">
+        <div class="team-name">Dr. Ramiro</div>
+        <div class="team-role">Endodoncia y Periodoncia</div>
+        <div class="team-col">Nº Col. 5107</div>
+      </div>
+    </a>
+    <a href="equipo.html" class="team-card">
+      <div class="team-photo"><div class="team-initials">RE</div></div>
+      <div class="team-info">
+        <div class="team-name">Raquel Esteban Puchecha</div>
+        <div class="team-role">Auxiliar de Odontología</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── PROCESO ── -->
+<section id="proceso">
+  <div class="process-header">
+    <div>
+      <div class="section-tag">Cita Previa</div>
+      <h2 class="section-title light">Tu proceso, paso a paso</h2>
+    </div>
+    <a href="contacto.html" class="btn-primary">Solicitar Cita</a>
+  </div>
+  <div class="process-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Contacto</div>
+      <div class="step-desc">Llámanos al 977 079 926 o escríbenos a info@odontologiacg.com para concertar tu primera visita sin compromiso.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Valoración</div>
+      <div class="step-desc">Realizamos un diagnóstico personalizado con radiografías digitales y ortopantomografía para evaluar tu caso.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Plan de Tratamiento</div>
+      <div class="step-desc">Te presentamos todas las alternativas disponibles con un plan completamente personalizado y presupuesto detallado.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Tu Nueva Sonrisa</div>
+      <div class="step-desc">Ejecutamos el tratamiento con la máxima precisión y te acompañamos con seguimiento post-tratamiento.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLUB OCG ── -->
+<section id="club">
+  <div class="club-pre">Club OCG</div>
+  <h2 class="club-title">Tu tarjeta de beneficios</h2>
+  <p class="club-desc">Hazte miembro del Club OCG y disfruta de ventajas exclusivas para cuidar tu salud oral durante todo el año.</p>
+  <div class="club-benefits">
+    <div class="club-benefit">Higiene anual incluida</div>
+    <div class="club-benefit">Radiografías incluidas</div>
+    <div class="club-benefit">Ortopantomografía</div>
+    <div class="club-benefit">Diagnóstico completo</div>
+  </div>
+  <a href="contacto.html" class="btn-dark-solid">Más Información</a>
+</section>
+
+<!-- ── CONTACTO STRIP ── -->
+<section id="contacto">
+  <div class="contact-block">
+    <div class="section-tag">Contacto</div>
+    <h3>Dónde encontrarnos</h3>
+    <p>Av. Pau Casals, 7</p>
+    <p>43003 Tarragona — España</p>
+    <p style="margin-top:18px">
+      <a href="tel:977079926">977 079 926</a>
+      <a href="mailto:info@odontologiacg.com">info@odontologiacg.com</a>
+    </p>
+  </div>
+  <div class="contact-block">
+    <h3>Horario</h3>
+    <div class="hours-row"><span class="hours-label">Lunes — Viernes</span></div>
+    <div class="hours-row"><span>Mañanas</span><span>10:00 — 14:00</span></div>
+    <div class="hours-row"><span>Tardes</span><span>16:00 — 20:00</span></div>
+    <div class="hours-row"><span class="hours-label">Sábados</span><span style="font-size:12px;color:var(--gray)">Cita previa</span></div>
+    <div class="hours-row"><span>Mañana</span><span>10:00 — 14:00</span></div>
+  </div>
+  <div class="contact-block">
+    <h3>Solicitar Cita</h3>
+    <p style="font-size:14px;color:#777;margin-bottom:20px;line-height:1.6">Llámanos o escríbenos y concertamos tu visita en el horario que mejor te venga.</p>
+    <a href="tel:977079926" class="btn-primary" style="margin-bottom:14px">Llamar: 977 079 926</a>
+    <div style="margin-top:14px">
+      <a href="mailto:info@odontologiacg.com" class="btn-ghost-dark">Enviar email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <h2>Tu sonrisa ideal comienza<br>con una <em>valoración</em></h2>
+  <p>Sin compromiso. En Tarragona, con el equipo especialista que cuida tu salud oral.</p>
+  <a href="tel:977079926" class="btn-primary">977 079 926</a>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Cristina Garavito <span>Odontología</span></a>
+      <p>Clínica dental especializada en estética dental y periodoncia en Tarragona. Av. Pau Casals, 7 — 43003 Tarragona.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Nosotros</h4>
+      <ul>
+        <li><a href="#nosotros">La Clínica</a></li>
+        <li><a href="equipo.html">Nuestro Equipo</a></li>
+        <li><a href="#club">Club OCG</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Especialidades</h4>
+      <ul>
+        <li><a href="especialidades/estetica-dental.html">Estética Dental</a></li>
+        <li><a href="especialidades/ortodoncia.html">Ortodoncia</a></li>
+        <li><a href="especialidades/implantologia.html">Implantología</a></li>
+        <li><a href="especialidades/periodoncia.html">Periodoncia</a></li>
+        <li><a href="especialidades.html">Ver todas →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://www.odontologiacg.com/aviso-legal/">Aviso Legal</a></li>
+        <li><a href="https://www.odontologiacg.com/politica-de-privacidad/">Privacidad</a></li>
+        <li><a href="https://www.odontologiacg.com/uso-de-cookies/">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cristina Garavito Odontología — Tarragona, España</p>
+    <p>Nº Col. 4847</p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Counter animation
+  const counters = document.querySelectorAll('[data-target]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.target;
+      let start = null;
+      const dur = 1000;
+      const step = (ts) => {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / dur, 1);
+        el.textContent = Math.floor(p * target);
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => io.observe(c));
+
+  // FAQ (shared)
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
