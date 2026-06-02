@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Equipo | Odontología Cristina Garavito — Tarragona</title>
+  <meta name="description" content="Conoce al equipo de especialistas de la clínica Odontología Cristina Garavito en Tarragona. Rehabilitación oral, ortodoncia, implantología, periodoncia y endodoncia.">
+  <link rel="canonical" href="https://www.odontologiacg.com/equipo/">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+    }
+    .team-full-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .team-full-card:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.09);
+      transform: translateY(-3px);
+    }
+    .team-full-photo {
+      height: 260px;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-full-photo::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    }
+    .team-initials-lg {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: rgba(184,150,110,0.12);
+      border: 1px solid rgba(184,150,110,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 28px; color: var(--gold);
+    }
+    .team-full-info { padding: 28px 32px; }
+    .team-full-col {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(184,150,110,0.08);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .team-full-name {
+      font-family: var(--serif);
+      font-size: 22px; font-weight: 500;
+      color: var(--black); margin-bottom: 6px;
+    }
+    .team-full-role {
+      font-size: 13px; color: #888;
+      line-height: 1.5; margin-bottom: 16px;
+    }
+    .team-full-divider {
+      width: 28px; height: 1px;
+      background: var(--gold); margin-bottom: 14px;
+    }
+    .team-full-desc {
+      font-size: 14px; color: #666;
+      line-height: 1.7; font-weight: 300;
+    }
+    .team-full-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-top: 18px;
+    }
+    .team-tag {
+      font-size: 11px;
+      color: #777;
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    /* Staff card - smaller */
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .staff-card {
+      background: var(--off-white);
+      padding: 28px;
+      border-radius: 2px;
+      border-top: 2px solid var(--gold);
+    }
+    .staff-initial {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(184,150,110,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 18px; color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .staff-name { font-family: var(--serif); font-size: 16px; color: var(--black); font-weight: 500; margin-bottom: 4px; }
+    .staff-role { font-size: 12px; color: #888; line-height: 1.4; }
+
+    /* Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      margin-top: 52px;
+    }
+    .value-card {
+      background: var(--dark);
+      padding: 44px;
+    }
+    .value-num {
+      font-family: var(--serif);
+      font-size: 56px; color: rgba(184,150,110,0.1);
+      line-height: 1; font-weight: 400;
+      margin-bottom: 14px;
+    }
+    .value-title {
+      font-family: var(--serif); font-size: 21px;
+      color: var(--white); font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .value-desc {
+      font-size: 14px; color: rgba(255,255,255,0.4);
+      line-height: 1.65; font-weight: 300;
+    }
+
+    @media(max-width:1024px){
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .staff-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:640px){
+      .team-grid { grid-template-columns: 1fr; }
+      .staff-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Cristina Garavito <span>Odontología</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="especialidades.html">Especialidades</a></li>
+    <li><a href="equipo.html" class="active">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="tel:977079926" class="nav-cta">977 079 926</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-tag">La clínica</div>
+  <h1>Un equipo de <em>especialistas</em></h1>
+  <p>Profesionales altamente cualificados en cada especialidad odontológica, trabajando de forma coordinada para ofrecerte la mejor atención posible.</p>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Inicio</a>
+  <span>›</span>
+  <span>Equipo</span>
+</div>
+
+<!-- ESPECIALISTAS PRINCIPALES -->
+<section class="content-section">
+  <div class="section-tag">Especialistas</div>
+  <h2 class="section-title">Nuestros doctores</h2>
+
+  <div class="team-grid">
+
+    <div class="team-full-card">
+      <div class="team-full-photo">
+        <div class="team-initials-lg">CG</div>
+      </div>
+      <div class="team-full-info">
+        <span class="team-full-col">Nº Col. 4847</span>
+        <div class="team-full-name">Dra. Cristina Garavito F.</div>
+        <div class="team-full-role">Directora clínica · Especialista en Rehabilitación Oral, ATM, Estética e Implantes</div>
+        <div class="team-full-divider"></div>
+        <div class="team-full-desc">Doctora en Odontología y directora de la clínica. Con una amplia trayectoria en rehabilitación oral compleja, estética dental y tratamiento de la articulación temporomandibular. Comprometida con la formación continua y la excelencia clínica.</div>
+        <div class="team-full-tags">
+          <span class="team-tag">Rehabilitación Oral</span>
+          <span class="team-tag">ATM</span>
+          <span class="team-tag">Estética Dental</span>
+          <span class="team-tag">Implantes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-full-card">
+      <div class="team-full-photo">
+        <div class="team-initials-lg">CA</div>
+      </div>
+      <div class="team-full-info">
+        <span class="team-full-col">Nº Col. 3121</span>
+        <div class="team-full-name">Dra. Cristina Aulés Martínez</div>
+        <div class="team-full-role">Especialista en Ortodoncia y Ortopedia Dentofacial</div>
+        <div class="team-full-divider"></div>
+        <div class="team-full-desc">Especialista en ortodoncia y ortopedia con amplia experiencia en el tratamiento de niños, adolescentes y adultos. Experta en técnicas de brackets y alineadores invisibles para la corrección de maloclusiones de cualquier complejidad.</div>
+        <div class="team-full-tags">
+          <span class="team-tag">Ortodoncia</span>
+          <span class="team-tag">Invisalign®</span>
+          <span class="team-tag">Ortopedia Infantil</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-full-card">
+      <div class="team-full-photo">
+        <div class="team-initials-lg">PA</div>
+      </div>
+      <div class="team-full-info">
+        <span class="team-full-col">Nº Col. 5217</span>
+        <div class="team-full-name">Dra. Patricia Anguis Martín</div>
+        <div class="team-full-role">Especialista en Cirugía Oral e Implantología · Periodoncia</div>
+        <div class="team-full-divider"></div>
+        <div class="team-full-desc">Especialista en cirugía oral, implantología y periodoncia. Con formación avanzada en técnicas quirúrgicas de regeneración ósea y tratamiento de la enfermedad periodontal. Orientada a resultados predecibles y de larga duración.</div>
+        <div class="team-full-tags">
+          <span class="team-tag">Implantología</span>
+          <span class="team-tag">Cirugía Oral</span>
+          <span class="team-tag">Periodoncia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-full-card">
+      <div class="team-full-photo">
+        <div class="team-initials-lg">DR</div>
+      </div>
+      <div class="team-full-info">
+        <span class="team-full-col">Nº Col. 5107</span>
+        <div class="team-full-name">Dr. Ramiro</div>
+        <div class="team-full-role">Especialista en Endodoncia y Periodoncia</div>
+        <div class="team-full-divider"></div>
+        <div class="team-full-desc">Especialista en endodoncia y periodoncia con dominio de las técnicas de instrumentación rotatoria, microcirugía apical y tratamiento periodontal quirúrgico. Comprometido con la conservación del diente natural siempre que sea posible.</div>
+        <div class="team-full-tags">
+          <span class="team-tag">Endodoncia</span>
+          <span class="team-tag">Microcirugía Apical</span>
+          <span class="team-tag">Periodoncia</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STAFF -->
+<section class="content-section bg-off">
+  <div class="section-tag">Personal de Apoyo</div>
+  <h2 class="section-title">El equipo al completo</h2>
+  <div class="staff-grid">
+    <div class="staff-card">
+      <div class="staff-initial">RE</div>
+      <div class="staff-name">Raquel Esteban Puchecha</div>
+      <div class="staff-role">Auxiliar de Odontología</div>
+    </div>
+    <div class="staff-card">
+      <div class="staff-initial">RC</div>
+      <div class="staff-name">Recepción y Coordinación</div>
+      <div class="staff-role">Atención al Paciente · Gestión de Citas</div>
+    </div>
+    <div class="staff-card">
+      <div class="staff-initial">HI</div>
+      <div class="staff-name">Higienista Dental</div>
+      <div class="staff-role">Higiene Oral · Profilaxis · Fluorización</div>
+    </div>
+    <div class="staff-card">
+      <div class="staff-initial">AU</div>
+      <div class="staff-name">Auxiliar Clínica</div>
+      <div class="staff-role">Asistencia en Clínica · Esterilización</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="content-section bg-black">
+  <div class="section-tag">Nuestros Valores</div>
+  <h2 class="section-title light">Lo que nos define</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-num">01</div>
+      <div class="value-title">Excelencia Clínica</div>
+      <div class="value-desc">Formación continua, materiales de primera calidad y protocolos clínicos actualizados para ofrecer siempre el mejor tratamiento disponible.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-num">02</div>
+      <div class="value-title">Atención Personalizada</div>
+      <div class="value-desc">Cada paciente es único. Escuchamos, diagnosticamos con rigor y adaptamos el plan de tratamiento a las necesidades y expectativas de cada persona.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-num">03</div>
+      <div class="value-title">Trabajo en Equipo</div>
+      <div class="value-desc">Nuestros especialistas trabajan de forma coordinada para ofrecer una valoración integral y un tratamiento coherente desde todas las disciplinas.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-num">04</div>
+      <div class="value-title">Transparencia</div>
+      <div class="value-desc">Informamos con claridad sobre el diagnóstico, las opciones de tratamiento y los presupuestos antes de iniciar cualquier procedimiento.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-num">05</div>
+      <div class="value-title">Confianza</div>
+      <div class="value-desc">Construimos relaciones duraderas con nuestros pacientes basadas en la honestidad, el respeto y los resultados clínicos demostrables.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-num">06</div>
+      <div class="value-title">Tecnología</div>
+      <div class="value-desc">Radiografía digital, ortopantomografía y equipos de última generación con estrictos controles de asepsia en todos los procedimientos.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Conoce a nuestro equipo<br><em>en persona</em></h2>
+  <p>Solicita tu primera visita sin compromiso. Estaremos encantados de recibirte en nuestra clínica de Tarragona.</p>
+  <a href="contacto.html" class="btn-primary">Solicitar Cita</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Cristina Garavito <span>Odontología</span></a>
+      <p>Clínica dental especializada en estética dental y periodoncia en Tarragona. Av. Pau Casals, 7 — 43003 Tarragona.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Nosotros</h4>
+      <ul>
+        <li><a href="index.html#nosotros">La Clínica</a></li>
+        <li><a href="equipo.html">Nuestro Equipo</a></li>
+        <li><a href="index.html#club">Club OCG</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Especialidades</h4>
+      <ul>
+        <li><a href="especialidades/estetica-dental.html">Estética Dental</a></li>
+        <li><a href="especialidades/ortodoncia.html">Ortodoncia</a></li>
+        <li><a href="especialidades/implantologia.html">Implantología</a></li>
+        <li><a href="especialidades/periodoncia.html">Periodoncia</a></li>
+        <li><a href="especialidades.html">Ver todas →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://www.odontologiacg.com/aviso-legal/">Aviso Legal</a></li>
+        <li><a href="https://www.odontologiacg.com/politica-de-privacidad/">Privacidad</a></li>
+        <li><a href="https://www.odontologiacg.com/uso-de-cookies/">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cristina Garavito Odontología — Tarragona, España</p>
+    <p>Nº Col. 4847</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                            

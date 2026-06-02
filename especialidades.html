@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialidades | Odontología Cristina Garavito — Tarragona</title>
+  <meta name="description" content="Todas las especialidades odontológicas en un solo lugar. Odontología conservadora, prótesis dental, implantología, periodoncia, estética dental, endodoncia, ortodoncia y odontopediatría en Tarragona.">
+  <link rel="canonical" href="https://www.odontologiacg.com/especialidades/">
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    .esp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(0,0,0,0.07);
+      margin-top: 56px;
+    }
+    .esp-card {
+      background: var(--white);
+      padding: 44px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .esp-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--gold);
+      transition: width 0.4s;
+    }
+    .esp-card:hover { background: var(--off-white); }
+    .esp-card:hover::after { width: 100%; }
+    .esp-card-num {
+      font-size: 11px;
+      color: rgba(184,150,110,0.5);
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .esp-card-icon {
+      width: 38px; height: 38px;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: block;
+    }
+    .esp-card-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .esp-card-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.65;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .esp-card-link {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 11.5px; color: var(--gold);
+      letter-spacing: 0.07em; text-transform: uppercase;
+      font-weight: 500;
+    }
+    @media(max-width:1024px){
+      .esp-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:640px){
+      .esp-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">Cristina Garavito <span>Odontología</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html#nosotros">Nosotros</a></li>
+    <li><a href="especialidades.html" class="active">Especialidades</a></li>
+    <li><a href="../equipo.html">Equipo</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+    <li><a href="tel:977079926" class="nav-cta">977 079 926</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-tag">Odontología integral</div>
+  <h1>Todas nuestras <em>especialidades</em></h1>
+  <p>Cubrimos todas las áreas de la odontología para ofrecerte una valoración precisa y el tratamiento más adecuado a tu caso, con un equipo especialista en cada disciplina.</p>
+</div>
+
+<div class="breadcrumb">
+  <a href="../index.html">Inicio</a>
+  <span>›</span>
+  <span>Especialidades</span>
+</div>
+
+<section class="content-section">
+  <div class="section-tag">9 Especialidades</div>
+  <h2 class="section-title">Tratamientos disponibles</h2>
+  <div class="esp-grid">
+
+    <a href="especialidades/odontologia-conservadora.html" class="esp-card">
+      <span class="esp-card-num">01</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1.5 5 3 7l4 6 4-6c1.5-2 3-4.5 3-7 0-3.5-3-7-7-7z"/></svg>
+      <div class="esp-card-name">Odontología Conservadora</div>
+      <div class="esp-card-desc">Preservación y restauración de la estructura dental mediante técnicas mínimamente invasivas, obturaciones y tratamientos preventivos.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/protesis-dental.html" class="esp-card">
+      <span class="esp-card-num">02</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      <div class="esp-card-name">Prótesis Dental</div>
+      <div class="esp-card-desc">Restauración funcional y estética mediante prótesis fija, removible e implanto-retenida para recuperar tu sonrisa y mordida.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/atm.html" class="esp-card">
+      <span class="esp-card-num">03</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-linecap="round" stroke-width="2.5"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-linecap="round" stroke-width="2.5"/></svg>
+      <div class="esp-card-name">ATM</div>
+      <div class="esp-card-desc">Diagnóstico y tratamiento de la articulación temporomandibular. Aliviamos el dolor, los chasquidos y la disfunción mandibular.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/implantologia.html" class="esp-card">
+      <span class="esp-card-num">04</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="2" x2="12" y2="22"/><path d="M5 8h14M5 16h14"/></svg>
+      <div class="esp-card-name">Implantología y Cirugía Oral</div>
+      <div class="esp-card-desc">Colocación de implantes dentales y procedimientos quirúrgicos orales con tecnología avanzada y máxima precisión.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/periodoncia.html" class="esp-card">
+      <span class="esp-card-num">05</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <div class="esp-card-name">Periodoncia</div>
+      <div class="esp-card-desc">Prevención y tratamiento de la enfermedad periodontal. Cuidamos tus encías para preservar la salud de toda tu boca.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/estetica-dental.html" class="esp-card">
+      <span class="esp-card-num">06</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div class="esp-card-name">Estética Dental</div>
+      <div class="esp-card-desc">Carillas, blanqueamiento dental y diseño de sonrisa personalizado para transformar tu sonrisa con resultados naturales.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/endodoncia.html" class="esp-card">
+      <span class="esp-card-num">07</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <div class="esp-card-name">Endodoncia</div>
+      <div class="esp-card-desc">Tratamiento de conductos para eliminar infecciones y salvar piezas dentales comprometidas con técnicas de microcirugía.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/ortodoncia.html" class="esp-card">
+      <span class="esp-card-num">08</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="esp-card-name">Ortodoncia</div>
+      <div class="esp-card-desc">Alineación dental con brackets convencionales e Invisalign® para corregir la posición de los dientes y la mordida.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+    <a href="especialidades/odontopediatria.html" class="esp-card">
+      <span class="esp-card-num">09</span>
+      <svg class="esp-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="esp-card-name">Odontopediatría</div>
+      <div class="esp-card-desc">Atención dental especializada para niños en un entorno tranquilo, cercano y adaptado a sus necesidades.</div>
+      <div class="esp-card-link">Ver especialidad <span>→</span></div>
+    </a>
+
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>¿No sabes qué tratamiento<br>necesitas? Te <em>orientamos</em></h2>
+  <p>Solicita una valoración y nuestro equipo analizará tu caso para recomendarte el mejor tratamiento.</p>
+  <a href="../contacto.html" class="btn-primary">Solicitar Valoración</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo">Cristina Garavito <span>Odontología</span></a>
+      <p>Clínica dental especializada en estética dental y periodoncia en Tarragona. Av. Pau Casals, 7 — 43003 Tarragona.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Nosotros</h4>
+      <ul>
+        <li><a href="../index.html#nosotros">La Clínica</a></li>
+        <li><a href="../equipo.html">Nuestro Equipo</a></li>
+        <li><a href="../index.html#club">Club OCG</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Especialidades</h4>
+      <ul>
+        <li><a href="especialidades/estetica-dental.html">Estética Dental</a></li>
+        <li><a href="especialidades/ortodoncia.html">Ortodoncia</a></li>
+        <li><a href="especialidades/implantologia.html">Implantología</a></li>
+        <li><a href="especialidades/periodoncia.html">Periodoncia</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://www.odontologiacg.com/aviso-legal/">Aviso Legal</a></li>
+        <li><a href="https://www.odontologiacg.com/politica-de-privacidad/">Privacidad</a></li>
+        <li><a href="https://www.odontologiacg.com/uso-de-cookies/">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cristina Garavito Odontología — Tarragona, España</p>
+    <p>Nº Col. 4847</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
